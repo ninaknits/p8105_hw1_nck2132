@@ -1,0 +1,11 @@
+---
+title: "HW1_nck2132"
+output: github_document
+---
+
+#Section 0: Set Up load libraries 
+```{r echo=F, message=F}
+library(tidyverse)
+
+```
+
