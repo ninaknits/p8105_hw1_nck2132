@@ -15,5 +15,11 @@ library(tidyverse)
 data("penguins", package = "palmerpenguins")
 ```
 
+#1.1 Names of Dataset/Values of Important Variables
+```{r}
+names(penguins)
+janitor::clean_names(penguins)
+```
+
 
 
