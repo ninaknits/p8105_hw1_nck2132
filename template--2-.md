@@ -112,5 +112,31 @@ Data summary
 \#The data set names are species, island, bill_length_mm, bill_depth_mm,
 flipper_length_mm, body_mass_g, sex, year. Species, island, and sex are
 categorical variables and bill length, bill depth, flipper length, body
-mass, and year continous variables. There are 344 rows in the dataset
-and 8 columns. The mean flipper length is 200.92 millimeters.
+mass, and year continuous variables. There are 344 rows in the dataset
+and 8 columns. \#Here are some important values of the continuous
+variables of the table. The mean flipper length is 200.92mm with a
+standard deviation of 14.06mm. The mean bill depth 43.92mm with a
+standard deviation is 1.97mm. The mean body mass is 4201.75 grams with a
+standard deviation 801.95 grams. The mean year is 2008.03 years and with
+a standard deviation 0.82 years. The mean bill length is 42.92mm with a
+standard deviation 5.46.
+
+\#Scatterplot of flipper_length_mm (y) vs bill_length_mm
+
+``` r
+ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=species))+geom_point()
+```
+
+    ## Warning: Removed 2 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](template--2-_files/figure-gfm/scatterplot%20flipper%20legnth%20vs.%20bill-1.png)<!-- -->
+
+``` r
+ggsave("scatter_plot.pdf")
+```
+
+    ## Saving 7 x 5 in image
+
+    ## Warning: Removed 2 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
