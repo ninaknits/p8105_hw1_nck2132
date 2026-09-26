@@ -1,11 +1,12 @@
 ---
-title: "HW1_nck2132"
+title: "p8105_HW1_nck2132"
+author: "Nina Knitowski"
 output: github_document
+date: "09-25-2026"
 ---
 
-#Section 0: Set Up load libraries 
-```{r echo=F, message=F}
-library(tidyverse)
 
-```
+
+
+
 

@@ -1,4 +1,5 @@
-HW1_nck2132
+p8105_HW1_nck2132
 ================
+Nina Knitowski
+09-25-2026
 
-\#Section 0: Set Up load libraries
