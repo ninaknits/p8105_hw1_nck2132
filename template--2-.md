@@ -109,19 +109,22 @@ Data summary
 | body_mass_g | 2 | 0.99 | 4201.75 | 801.95 | 2700.0 | 3550.00 | 4050.00 | 4750.0 | 6300.0 | ▃▇▆▃▂ |
 | year | 0 | 1.00 | 2008.03 | 0.82 | 2007.0 | 2007.00 | 2008.00 | 2009.0 | 2009.0 | ▇▁▇▁▇ |
 
-\#The data set names are species, island, bill_length_mm, bill_depth_mm,
+The data set names are species, island, bill_length_mm, bill_depth_mm,
 flipper_length_mm, body_mass_g, sex, year. Species, island, and sex are
 categorical variables and bill length, bill depth, flipper length, body
 mass, and year continuous variables. There are 344 rows in the dataset
-and 8 columns. There are 344 observations and 8 variables. \#Here are
-some important values of the continuous variables of the table. The mean
-flipper length is 200.92mm with a standard deviation of 14.06mm. The
-mean bill depth 43.92mm with a standard deviation is 1.97mm. The mean
-body mass is 4201.75 grams with a standard deviation 801.95 grams. The
-mean year is 2008.03 years and with a standard deviation 0.82 years. The
-mean bill length is 42.92mm with a standard deviation 5.46. The skimr
-package shows me the missing values in the dataset and does not include
-NA when preforming calculations of the mean and standard deviation.
+and 8 columns. There are 344 observations and 8 variables. Here are some
+important values of the continuous variables of the table. The mean
+flipper length is 200.9152047 with a standard deviation of 14.0617137.
+The mean bill depth is 17.1511696 with a standard deviation of
+1.9747932. The mean body mass is 4201.754386 with a standard deviation
+of 801.9545357. The mean year is 2008.0290698 and with a standard
+deviation of 0.8183559. The mean bill length is 43.9219298 with a
+standard deviation of 5.4595837. The skimr package shows me the missing
+values in the dataset and does not include NA when preforming
+calculations of the mean and standard deviation, but for the inline code
+when I compute mean and SD separately I must purposefully exclude these
+values.
 
 \#Scatterplot of flipper_length_mm (y) vs bill_length_mm
 
@@ -160,7 +163,7 @@ HWProb2_df = tibble(
 mean(pull(HWProb2_df, norm_samp))
 ```
 
-    ## [1] 0.03593852
+    ## [1] -0.04059459
 
 ``` r
 mean(pull(HWProb2_df, norm_samp_pos))
