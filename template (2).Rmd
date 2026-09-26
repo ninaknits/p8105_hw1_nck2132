@@ -20,6 +20,18 @@ data("penguins", package = "palmerpenguins")
 names(penguins)
 janitor::clean_names(penguins)
 ```
+#columns and rows of dataset
+```{r}
+nrow(penguins)
+ncol(penguins)
+```
+#The mean flipper length included in the skim function AND important values in the dataset
+```{r}
+skimr::skim(penguins)
+```
+
+#The data set names are species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex, year. Species, island, and sex are categorical variables and bill length, bill depth, flipper length, body mass, and year continous variables. There are 344 rows in the dataset and 8 columns. The mean flipper length is 200.92 millimeters. 
+
 
 
 

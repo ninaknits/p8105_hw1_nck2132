@@ -55,3 +55,62 @@ janitor::clean_names(penguins)
     ## 10 Adelie  Torgersen           42            20.2               190        4250
     ## # ℹ 334 more rows
     ## # ℹ 2 more variables: sex <fct>, year <int>
+
+\#columns and rows of dataset
+
+``` r
+nrow(penguins)
+```
+
+    ## [1] 344
+
+``` r
+ncol(penguins)
+```
+
+    ## [1] 8
+
+\#The mean flipper length included in the skim function AND important
+values in the dataset
+
+``` r
+skimr::skim(penguins)
+```
+
+|                                                  |          |
+|:-------------------------------------------------|:---------|
+| Name                                             | penguins |
+| Number of rows                                   | 344      |
+| Number of columns                                | 8        |
+| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_   |          |
+| Column type frequency:                           |          |
+| factor                                           | 3        |
+| numeric                                          | 5        |
+| \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |          |
+| Group variables                                  | None     |
+
+Data summary
+
+**Variable type: factor**
+
+| skim_variable | n_missing | complete_rate | ordered | n_unique | top_counts |
+|:---|---:|---:|:---|---:|:---|
+| species | 0 | 1.00 | FALSE | 3 | Ade: 152, Gen: 124, Chi: 68 |
+| island | 0 | 1.00 | FALSE | 3 | Bis: 168, Dre: 124, Tor: 52 |
+| sex | 11 | 0.97 | FALSE | 2 | mal: 168, fem: 165 |
+
+**Variable type: numeric**
+
+| skim_variable | n_missing | complete_rate | mean | sd | p0 | p25 | p50 | p75 | p100 | hist |
+|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|
+| bill_length_mm | 2 | 0.99 | 43.92 | 5.46 | 32.1 | 39.23 | 44.45 | 48.5 | 59.6 | ▃▇▇▆▁ |
+| bill_depth_mm | 2 | 0.99 | 17.15 | 1.97 | 13.1 | 15.60 | 17.30 | 18.7 | 21.5 | ▅▅▇▇▂ |
+| flipper_length_mm | 2 | 0.99 | 200.92 | 14.06 | 172.0 | 190.00 | 197.00 | 213.0 | 231.0 | ▂▇▃▅▂ |
+| body_mass_g | 2 | 0.99 | 4201.75 | 801.95 | 2700.0 | 3550.00 | 4050.00 | 4750.0 | 6300.0 | ▃▇▆▃▂ |
+| year | 0 | 1.00 | 2008.03 | 0.82 | 2007.0 | 2007.00 | 2008.00 | 2009.0 | 2009.0 | ▇▁▇▁▇ |
+
+\#The data set names are species, island, bill_length_mm, bill_depth_mm,
+flipper_length_mm, body_mass_g, sex, year. Species, island, and sex are
+categorical variables and bill length, bill depth, flipper length, body
+mass, and year continous variables. There are 344 rows in the dataset
+and 8 columns. The mean flipper length is 200.92 millimeters.
