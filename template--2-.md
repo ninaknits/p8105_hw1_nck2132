@@ -113,13 +113,15 @@ Data summary
 flipper_length_mm, body_mass_g, sex, year. Species, island, and sex are
 categorical variables and bill length, bill depth, flipper length, body
 mass, and year continuous variables. There are 344 rows in the dataset
-and 8 columns. \#Here are some important values of the continuous
-variables of the table. The mean flipper length is 200.92mm with a
-standard deviation of 14.06mm. The mean bill depth 43.92mm with a
-standard deviation is 1.97mm. The mean body mass is 4201.75 grams with a
-standard deviation 801.95 grams. The mean year is 2008.03 years and with
-a standard deviation 0.82 years. The mean bill length is 42.92mm with a
-standard deviation 5.46.
+and 8 columns. There are 344 observations and 8 variables. \#Here are
+some important values of the continuous variables of the table. The mean
+flipper length is 200.92mm with a standard deviation of 14.06mm. The
+mean bill depth 43.92mm with a standard deviation is 1.97mm. The mean
+body mass is 4201.75 grams with a standard deviation 801.95 grams. The
+mean year is 2008.03 years and with a standard deviation 0.82 years. The
+mean bill length is 42.92mm with a standard deviation 5.46. The skimr
+package shows me the missing values in the dataset and does not include
+NA when preforming calculations of the mean and standard deviation.
 
 \#Scatterplot of flipper_length_mm (y) vs bill_length_mm
 
@@ -140,3 +142,16 @@ ggsave("scatter_plot.pdf")
 
     ## Warning: Removed 2 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
+
+\#Question 2 \#2.1 Create Data Frame
+
+``` r
+HWProb2_df = tibble(
+  norm_samp = rnorm(10),
+  norm_samp_pos = (norm_samp > 0),
+  vec_char = c("My", "name", "is", "Nina", "Knitowski","and", "I", "currently","live", "in NYC"),
+  vec_factor = factor(c("a", "b", "c", "c", "b", "a", "a", "b", "c", "a"))
+)
+```
+
+\#2.2 Try Means Using Pull
