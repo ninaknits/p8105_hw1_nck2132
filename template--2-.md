@@ -155,3 +155,44 @@ HWProb2_df = tibble(
 ```
 
 \#2.2 Try Means Using Pull
+
+``` r
+mean(pull(HWProb2_df, norm_samp))
+```
+
+    ## [1] 0.03593852
+
+``` r
+mean(pull(HWProb2_df, norm_samp_pos))
+```
+
+    ## [1] 0.6
+
+``` r
+mean(pull(HWProb2_df, vec_char))
+```
+
+    ## [1] NA
+
+``` r
+mean(pull(HWProb2_df, vec_factor))
+```
+
+    ## [1] NA
+
+# I was able to calculate the mean of numeric vector (norm_samp), the logical vector (norm_samp_pos), but not able to calculate the mean of the character factor (vec_char) and factor vector (vec_fac).
+
+\#2.3 Convert logical, character, and factor variables to numeric
+
+``` r
+as.numeric(pull(HWProb2_df, norm_samp_pos))
+as.numeric(pull(HWProb2_df, vec_char))
+```
+
+    ## Warning: NAs introduced by coercion
+
+``` r
+as.numeric(pull(HWProb2_df, vec_factor))
+```
+
+# Logical and factor variables can be converted into numeric values, but character variables cannot. R tells us “\## Warning: NAs introduced by coercion” when we try to convert a character variable into a numeric one because it is not able to convert letters and words into numbers.This helps explain why we could only take the mean of logical and numeric variables because these variables have number values. The factor vector is a categorical variable but can be converted to a numeric values for each category (1,2,3) R does not take the mean because they are numerical values used to represent the categories are not quantitative measurements. The character vector cannot be converted because it is just a set of words there is no way to turn text into a numeric value and therefore you cannot take the mean without numbers. Essentially, R does not want to take the average of character variables and categorical variables because it does not make sense.
