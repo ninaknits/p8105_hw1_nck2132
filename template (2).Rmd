@@ -5,8 +5,15 @@ output: github_document
 date: "09-25-2026"
 ---
 
+#Question 0: Load Library
+```{r}
+library(tidyverse)
+```
 
-
+#Question 1 Load Dataset
+```{r}
+data("penguins", package = "palmerpenguins")
+```
 
 
 
