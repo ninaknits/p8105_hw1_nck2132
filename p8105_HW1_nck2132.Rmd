@@ -43,7 +43,7 @@ ggsave("scatter_plot.pdf")
 #2.1 Create Data Frame
 ```{r Problem_2_Df}
 HWProb2_df = tibble(
-  norm_samp = rnorm(10),
+  norm_samp = rnorm(10, mean=1),
   norm_samp_pos = (norm_samp > 0),
   vec_char = c("My", "name", "is", "Nina", "Knitowski","and", "I", "currently","live", "in NYC"),
   vec_factor = factor(c("a", "b", "c", "c", "b", "a", "a", "b", "c", "a"))
